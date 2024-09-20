@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Employee Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This Employee Management System is a web application developed as part of an internship screening assignment. It enables users to manage employee records efficiently, offering a user-friendly interface and robust backend functionalities.
 
-## Available Scripts
+## Purpose
+The purpose of this project is to demonstrate my skills in full-stack development, including frontend and backend integration, as well as my ability to implement authentication and data management features.
 
-In the project directory, you can run:
+## Features
+- **User Authentication**: Secure login and registration functionalities.
+- **Employee Management**: Create, read, update, and delete (CRUD) employee records.
+- **Responsive Design**: Ensures usability across different devices.
+- **Role-Based Access Control**: Differentiated access levels for administrators and regular users.
 
-### `npm start`
+## Technologies Used
+- **Frontend**: 
+  - React
+  - Axios for API calls
+  - CSS/Bootstrap for styling
+- **Backend**: 
+  - Node.js
+  - Express.js for routing
+  - MongoDB for data storage
+  - JSON Web Tokens (JWT) for secure authentication
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setup Instructions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
+Ensure you have the following installed on your machine:
+- Node.js (version 14 or above)
+- MongoDB
+- Docker (optional for containerization)
 
-### `npm test`
+### Cloning the Repository
+To get started, clone this repository to your local machine:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/yourusername/EmployeeManagement.git
+cd EmployeeManagement
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+EmployeeManagement/
+│
+├── client/                             # React frontend
+│   ├── public/                         
+│   ├── src/                            
+│   │   ├── components/                 
+│   │   │   ├── EmployeeForm.js         # React component for Employee Form
+│   │   │   ├── EmployeeList.js         # React component for Employee List
+│   │   │   └── Login.js                # React component for Login
+│   │   ├── App.js                      # Main App component
+│   │   └── index.js                    # Entry point for React
+│   ├── Dockerfile                      # Dockerfile for frontend
+│   └── package.json                    # Frontend dependencies
+│
+├── config/                             # Configuration files
+│   └── db.js                           # MongoDB connection config
+│
+├── controllers/                        # Backend controllers
+│   ├── authController.js               # Authentication (Login) controller
+│   └── employeeController.js           # Employee CRUD controller
+│
+├── models/                             # Mongoose models
+│   ├── Employee.js                     # Employee schema/model
+│   └── User.js                         # User schema/model for login
+│
+├── routes/                             # API routes
+│   ├── authRoutes.js                   # Authentication routes (login)
+│   └── employeeRoutes.js               # Employee-related routes
+│
+├── middleware/                         # Express middleware
+│   └── authMiddleware.js               # Middleware to protect routes with JWT
+│
+├── uploads/                            # Uploaded images will be stored here
+│
+├── .env                                # Environment variables (MongoDB URI, JWT secret)
+├── .dockerignore                       # Ignore unnecessary files in Docker image
+├── Dockerfile                          # Dockerfile for backend
+├── docker-compose.yml                  # Docker Compose to manage backend, frontend, and MongoDB
+├── package.json                        # Backend dependencies
+├── server.js                           # Main server file for backend
+└── README.md                           # Project documentation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
