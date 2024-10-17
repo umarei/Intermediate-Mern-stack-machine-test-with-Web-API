@@ -3,6 +3,11 @@
 ## Overview
 This Employee Management System is a web application developed as part of an internship screening assignment. It enables users to manage employee records efficiently, offering a user-friendly interface and robust backend functionalities.
 
+
+![WhatsApp Image 2024-10-17 at 22 12 57_376c9d56](https://github.com/user-attachments/assets/9a11a99a-05c5-4aa5-846e-ec685fb73d3d)
+
+
+
 ## Purpose
 The purpose of this project is to demonstrate my skills in full-stack development, including frontend and backend integration, as well as my ability to implement authentication and data management features.
 
